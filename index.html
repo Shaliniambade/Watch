@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCH  || Javascript</title>
+
+    <style>
+        .mdiv{
+            height: 100vh;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            background-image: url("baby.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+        }
+
+        .tim{
+            text-align: center;
+            font-size: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mdiv">
+
+        <h1 id="tim" class="tim"></h1>
+
+        
+    </div>
+
+
+    <script>
+        let tim = document.getElementById("tim");
+
+        function updateTime()
+        {
+            let tm = new Date();
+            let hr = tm.getHours();
+            let mn = tm.getMinutes();
+            let sc = tm.getSeconds();
+            tim.innerHTML = hr+":"+mn+":"+sc;
+        }
+        setInterval(updateTime,500);
+    </script>
+    
+</body>
+</html>
